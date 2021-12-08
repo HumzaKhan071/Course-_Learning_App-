@@ -2,6 +2,7 @@
 
 import 'package:e_learning_app/constants/colors.dart';
 import 'package:e_learning_app/models/course.dart';
+import 'package:e_learning_app/screens/detail/detail.dart';
 import 'package:flutter/material.dart';
 
 class CourseItem extends StatelessWidget {
@@ -107,7 +108,9 @@ class CourseItem extends StatelessWidget {
                   )
                 ),
                 
-                onPressed: () {}, child: Text("Start")))
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_)=>DetailPage(course: course,)));
+                }, child: Text("Start")))
         ],
       ),
     );
